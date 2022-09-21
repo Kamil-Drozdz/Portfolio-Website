@@ -338,6 +338,7 @@ h3.my-profession {
 }
 .skills-info {
 	color: var(--skin-color);
+	cursor: pointer;
 }
 .about .about-content .skills {
 	flex: 0 0 40%;
