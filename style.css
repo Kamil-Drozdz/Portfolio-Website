@@ -375,15 +375,19 @@ h3.my-profession {
 }
 .about .about-content .skills .skill-item .progress .progress-in-JS {
 	animation: load-JS 3s normal forwards;
+	animation-delay: 0.6s;
 }
 .about .about-content .skills .skill-item .progress .progress-in-CSS {
 	animation: load-CSS 3s normal forwards;
+	animation-delay: 1s;
 }
 .about .about-content .skills .skill-item .progress .progress-in-HTML {
 	animation: load-HTML 3s normal forwards;
+	animation-delay: 1.4s;
 }
 .about .about-content .skills .skill-item .progress .progress-in-RWD {
 	animation: load-RWD 3s normal forwards;
+	animation-delay: 1.6s;
 }
 
 .about .about-content .skills .skill-item .skill-percent {
