@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="style-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
@@ -39,10 +39,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <div class="text-color hidden">
+                            <div class="text-color ">
                                 <label for="text_color">Zmień Kolor na swój ulubiony!</label>
                                 <input type="color" class="color-picker" data-theme-value="--skin-color" />
-                                <button id="reset">Reset</button>
+                                <button id="reset"><i class="fa fa-refresh"></i></button>
                             </div>
                             <h3 class="hello">Cześć, jestem <span class="name">Kamil Dróżdż</span></h3>
                             <h3 class="my-profession">jestem <span class="typing">Front-end Developerem</span></h3>
@@ -442,7 +442,19 @@
                 </div>
             </section>
         </div>
-
+    </div>
+    <!--Style switcher-->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-skin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-moon"></i>
+        </div>
+        <h4>xx</h4>
+        <div class="colors">
+            <span class="color-1"></span>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

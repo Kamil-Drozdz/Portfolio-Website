@@ -68,8 +68,21 @@ ul {
 .section .color-picker {
 	border: none;
 }
+.section .text-color .fa {
+	color: var(--text-black-900);
+	margin-left: -6px;
+	cursor: pointer;
+}
 #reset {
-	color: #ff0000;
+	width: 1px;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 8px 16px;
+	border-radius: 40px;
+	display: fixed;
+	border: none;
+	white-space: nowrap;
+	background: var(--skin-color);
 }
 .section-title h2::before {
 	content: '';
@@ -127,15 +140,15 @@ ul {
 	width: 270px;
 	background-color: var(--bg-black-100);
 	position: fixed;
-	left: 0;
 	top: 0;
 	padding: 30px;
 	height: 100%;
+	list-style-type: none;
 	border-right: 1px solid var(--bg-black-50);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 10;
+	z-index: 100;
 }
 .aside .logo {
 	position: absolute;
