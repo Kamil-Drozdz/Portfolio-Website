@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
 
 :root {
+	--skin-color: rgb(253, 38, 0);
 	--bg-black-900: #f2f2fc;
 	--bg-black-100: #fdf9ff;
 	--bg-black-50: #e8dfec;
@@ -59,6 +60,16 @@ ul {
 	color: var(--text-black-900);
 	font-weight: 700;
 	position: relative;
+}
+.section .text-color {
+	color: var(--skin-color);
+	position: fixed;
+}
+.section .color-picker {
+	border: none;
+}
+#reset {
+	color: #ff0000;
 }
 .section-title h2::before {
 	content: '';
@@ -636,6 +647,47 @@ h3.my-profession {
 .contact .contact-form .btn {
 	height: 50px;
 	padding: 0 50px;
+}
+@media (max-width: 1199px) {
+	.aside {
+		left: -270px;
+	}
+	.main-content {
+		padding-left: 0;
+	}
+	.about .about-content .personal-info .info-item p span {
+		display: block;
+		margin-left: 0;
+	}
+}
+@media (max-width: 991px) {
+	.contact .contact-info-item,
+	.portfolio .portfolio-item,
+	.service .service-item {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.home .home-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.home .home-img {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.contact .contact-form .col-6,
+	.contact .contact-info-item,
+	.portfolio .portfolio-item,
+	.service .service-item,
+	.about .about-content .experience,
+	.about .about-content .education,
+	.about .about-content .skills,
+	.about .about-content .personal-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
 
 /* animation frames*/
