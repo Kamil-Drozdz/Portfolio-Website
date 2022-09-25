@@ -39,11 +39,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <div class="text-color ">
-                                <label for="text_color">Zmień Kolor na swój ulubiony!</label>
-                                <input type="color" class="color-picker" data-theme-value="--skin-color" />
-                                <button id="reset"><i class="fa fa-refresh"></i></button>
-                            </div>
                             <h3 class="hello">Cześć, jestem <span class="name">Kamil Dróżdż</span></h3>
                             <h3 class="my-profession">jestem <span class="typing">Front-end Developerem</span></h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum,
@@ -446,17 +441,21 @@
     <!--Style switcher-->
     <div class="style-switcher">
         <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-skin"></i>
+            <i class="fas fa-cog fa-spin"></i>
         </div>
         <div class="day-night s-icon">
             <i class="fas fa-moon"></i>
         </div>
-        <h4>xx</h4>
+        <h4>Zmień Kolor na swój ulubiony!</h4>
         <div class="colors">
-            <span class="color-1"></span>
+            <div class="text-color ">
+                <input type="color" class="color-picker" data-theme-value="--skin-color" />
+                <button class="reset"><i class="fa fa-refresh"></i></button>
+            </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="./style-switcher.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 const textColor = getComputedStyle(document.body).getPropertyValue('--skin-color');
-const resetBtn = document.getElementById('reset');
+const resetBtn = document.querySelector('.reset');
 const textColorPicker = document.querySelector('.color-picker');
 const themeOptions = [textColorPicker];
 
