@@ -36,9 +36,6 @@
 .style-switcher .s-icon i {
 	line-height: 40px;
 }
-.style-switcher .style-switcher-toogler {
-	top: 0;
-}
 .style-switcher .day-night {
 	top: 55px;
 }
@@ -60,4 +57,22 @@
 	width: 30px;
 	border-radius: 50%;
 	border: 1px solid red;
+}
+.color-picker {
+	margin-right: 20px;
+	border: none;
+}
+.style-switcher .reset {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	font-size: 15px;
+	background-color: var(--bg-black-100);
+	color: var(--text-black-900);
+	border: 1px solid var(--bg-black-50);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	top: 76px;
 }
