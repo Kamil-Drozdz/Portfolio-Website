@@ -69,6 +69,5 @@ window.addEventListener('load', () => {
 
 	setTimeout(function () {
 		document.body.removeChild(load_screen);
-		document.body;
 	}, 2050);
 });

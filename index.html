@@ -378,25 +378,29 @@
                     <h4 class="contact-sub-title padd-15">zapraszam do kontaktu</h4>
                     <div class="row">
                         <!--contact item-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-phone"></i></div>
-                            <h4>Zadzwoń</h4>
-                            <p>+48 570 728 479</p>
+                        <div class="contact-info-item padd-15"><a href="tel:+48 570 728 479">
+                                <div class="icon"> <i class="fa fa-phone"></i></div>
+                                <h4>Zadzwoń</h4>
+                                <p>+48 570 728 479</p>
+                            </a>
                         </div>
                         <div class="contact-info-item padd-15">
                             <div class="icon"> <i class="fa fa-map-marker-alt"></i></div>
                             <h4>Biuro</h4>
                             <p>Warszawa</p>
                         </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-globe-europe"></i></div>
-                            <h4>E-mail</h4>
-                            <p>Kamil12x@wp.pl</p>
+                        <div class="contact-info-item padd-15"><a href="mailto:kamil12x@wp.pl">
+                                <div class="icon"> <i class="fa fa-globe-europe"></i></div>
+                                <h4>E-mail</h4>
+                                <p>Kamil12x@wp.pl</p>
+                            </a>
                         </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-code-fork"></i></div>
-                            <h4>Strona</h4>
-                            <p>kamil-drozdz.netlify.app</p>
+                        <div class="contact-info-item padd-15"><a href="https://kamil-drozdz.netlify.app"
+                                target="_blank">
+                                <div class="icon"> <i class="fa fa-code-fork"></i></div>
+                                <h4>Strona</h4>
+                                <p>kamil-drozdz.netlify.app</p>
+                            </a>
                         </div>
                     </div>
                     <h3 class="contact-title padd-15">Wyślij mi E-mail!</h3>
@@ -404,38 +408,44 @@
                     <!--Contact form-->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Imię i Nazwisko">
+                            <form action="https://formsubmit.co/kamil12x@wp.pl" method="POST">
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name"
+                                                placeholder="Imię i Nazwisko" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="E-mail"
+                                                required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="E-mail">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Temat">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" placeholder="Temat">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Wiadomość"></textarea>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" 
+                                                placeholder="Wiadomość"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn"> Wyślij wiadomość </button>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <button class="btn">
+                                            <span><i class="fas fa-paper-plane "></i></span>
+                                            Wyślij wiadomść </button>
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -459,15 +469,13 @@
         </div>
     </div>
     <!--Loading screen-->
+    <div class="loader section-left"></div>
+    <div class="loader section-right"></div>
     <div id="loading-wrapper">
         <div id="loading-text"><img class='loading-img' src="./images/logo-modified.png"></img></div>
         <div id="loading-content"></div>
     </div>
-    <script>
-        $(window).on('load', function () {
-            $('.loading-wrapper').fadeOut('slow');
-        })
-    </script>
+
     <!--typing scirpt-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
         referrerpolicy="no-referrer"></script>
