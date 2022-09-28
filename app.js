@@ -32,7 +32,7 @@ window.addEventListener('scroll', () => {
 
 /*Typing animation */
 let typed = new Typed('.typing', {
-	strings: ['Web Designer', 'Web Developer', 'Front-end Developer', 'nie wiadomo co j:D'],
+	strings: ['Web Designer', 'Web Developer', 'Front-end Developer'],
 	typeSpeed: 100,
 	BackSpeed: 60,
 	loop: true,
@@ -62,4 +62,13 @@ window.addEventListener('load', () => {
 	} else {
 		dayNight.querySelector('i').classList.add('fa-moon');
 	}
+});
+
+window.addEventListener('load', () => {
+	let load_screen = document.getElementById('loading-wrapper');
+
+	setTimeout(function () {
+		document.body.removeChild(load_screen);
+		document.body;
+	}, 2050);
 });

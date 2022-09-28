@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-switcher.css">
+    <link rel="stylesheet" href="loading-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
@@ -41,11 +42,14 @@
                         <div class="home-info padd-15">
                             <h3 class="hello">Cześć, jestem <span class="name">Kamil Dróżdż</span></h3>
                             <h3 class="my-profession">jestem <span class="typing">Front-end Developerem</span></h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum,
-                                architecto voluptatum quod ex fugiat itaque accusantium doloribus soluta doloremque?
-                                Nulla
-                                pariatur,
-                                animi explicabo earum fuga alias sunt veniam laudantium repellendus?</p>
+                            <p>Cześć, jak widzisz tworzę rzeczy które żyją w internecie. Moje zainteresowania
+                                szerokopojętym WEB developmentem, zaczeły się stosunkowo niedawno bo na początku roku
+                                2022.
+                                Im dłużej koduje tym bardziej mi się to podoba i więcej potrafie zrobić!
+                                jeżeli masz jakiś pomysł który będe mogł przeprawić na kod, to śmiało, jestem otwarty i
+                                chętny na nowe pomysły!
+
+                            </p>
                             <a href="#contact" class="btn contact">Kontakt </a>
                         </div>
                         <div class="home-img padd-15">
@@ -454,6 +458,16 @@
             </div>
         </div>
     </div>
+    <!--Loading screen-->
+    <div id="loading-wrapper">
+        <div id="loading-text"><img class='loading-img' src="./images/logo-modified.png"></img></div>
+        <div id="loading-content"></div>
+    </div>
+    <script>
+        $(window).on('load', function () {
+            $('.loading-wrapper').fadeOut('slow');
+        })
+    </script>
     <!--typing scirpt-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
         referrerpolicy="no-referrer"></script>
