@@ -1,7 +1,7 @@
 .style-switcher {
 	position: fixed;
-	right: 0;
-	top: 5px;
+	right: 0px;
+	top: 0px;
 	padding: 15px;
 	width: 200px;
 	border: 1px solid var(--bg-black-50);
@@ -37,7 +37,7 @@
 	line-height: 40px;
 }
 .style-switcher .day-night {
-	top: 55px;
+	top: 62px;
 }
 .style-switcher h4 {
 	margin: 0 0 10px;

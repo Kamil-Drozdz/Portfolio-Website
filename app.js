@@ -2,7 +2,9 @@
 const textColor = getComputedStyle(document.body).getPropertyValue('--skin-color');
 const resetBtn = document.querySelector('.reset');
 const textColorPicker = document.querySelector('.color-picker');
+const skills = document.querySelector('.skills');
 const themeOptions = [textColorPicker];
+const url = 'https://api.quotable.io/random';
 
 themeOptions.forEach(function (option) {
 	option.addEventListener('change', event => {
@@ -32,7 +34,7 @@ window.addEventListener('scroll', () => {
 
 /*Typing animation */
 let typed = new Typed('.typing', {
-	strings: ['Web Designer', 'Web Developer', 'Front-end Developer'],
+	strings: ['Web Designerem', 'Web Developerem', 'Front-end Developerem'],
 	typeSpeed: 100,
 	BackSpeed: 60,
 	loop: true,
@@ -66,8 +68,27 @@ window.addEventListener('load', () => {
 /* preloader screen */
 window.addEventListener('load', () => {
 	let load_screen = document.getElementById('loading-wrapper');
-
-	setTimeout(function () {
+	setTimeout(() => {
 		document.body.removeChild(load_screen);
-	}, 2050);
+	}, 3050);
 });
+
+// adds text in js
+let lowercase = (document.getElementById('text').innerHTML = 'Zmień kolor na jaki chcesz');
+
+//random quotes in loading screen
+
+function generateQuote() {
+	fetch(url)
+		.then(function (data) {
+			return data.json();
+		})
+		.then(function (data) {
+			document.querySelector('.quote').innerHTML = data.content;
+			document.querySelector('.author').innerHTML = '- ' + data.author;
+		})
+		.catch(function (err) {
+			console.log(err);
+		});
+}
+generateQuote();

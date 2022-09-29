@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kamil Dróżdż - Front- end developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-switcher.css">
     <link rel="stylesheet" href="loading-page.css">
@@ -79,7 +79,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" loading="lazy">
                                 <div class="personal-info padd-15 ">
                                     <div class="row">
                                         <div class="info-item padd-15">
@@ -107,7 +107,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Moje CV</a>
+                                            <a class="btn" href="./assets/Front-end Developer Kamil Dróżdż.pdf"
+                                                download>Moje CV</a>
                                             <a href="#contact" class="btn hire-me">Zatrudnij</a>
                                         </div>
                                     </div>
@@ -460,7 +461,7 @@
         <div class="day-night s-icon">
             <i class="fa     "></i>
         </div>
-        <h4>Zmień kolor na swój ulubiony!</h4>
+        <h4 id="text"></h4>
         <div class="colors">
             <div class="text-color ">
                 <input type="color" class="color-picker" data-theme-value="--skin-color" />
@@ -474,13 +475,17 @@
     <div id="loading-wrapper">
         <div id="loading-text"><img class='loading-img' src="./images/logo-modified.png"></img></div>
         <div id="loading-content"></div>
-    </div>
+        <div class="container">
+            <h1>Losowe cytaty wielkich ludzi...</h1>
+            <div class="quote"></div>
+            <div class="author"></div>
+        </div>
 
-    <!--typing scirpt-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-        referrerpolicy="no-referrer"></script>
-    <script src="./style-switcher.js"></script>
-    <script src="./app.js"></script>
+        <!--typing scirpt-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+            referrerpolicy="no-referrer"></script>
+        <script src="./style-switcher.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>
