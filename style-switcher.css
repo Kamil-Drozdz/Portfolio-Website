@@ -64,15 +64,22 @@
 }
 .style-switcher .reset {
 	position: absolute;
-	height: 20px;
-	width: 20px;
+	height: 40px;
+	width: 40px;
 	text-align: center;
-	font-size: 15px;
+	font-size: 20px;
 	background-color: var(--bg-black-100);
 	color: var(--text-black-900);
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border-radius: 50%;
-	top: 76px;
+	top: 69px;
+	margin-left: 70px;
+}
+.style-switcher .reset:hover {
+	background-color: var(--skin-color);
+}
+.style-switcher .reset .fa {
+	margin-top: 10px;
 }

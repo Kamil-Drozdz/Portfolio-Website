@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
 		dayNight.querySelector('i').classList.add('fa-moon');
 	}
 });
-
+/* preloader screen */
 window.addEventListener('load', () => {
 	let load_screen = document.getElementById('loading-wrapper');
 
