@@ -92,3 +92,16 @@ function generateQuote() {
 		});
 }
 generateQuote();
+
+//animation responsive toogle nav
+const navLinks = document.querySelector('.aside .nav');
+const toogleNav = document.querySelector('.aside .nav-toggler');
+const links = document.querySelectorAll('.aside .nav li');
+toogleNav.addEventListener('click', () => {
+	navLinks.classList.toggle('open');
+	links.forEach(link => {
+		link.classList.toggle('fade');
+	});
+
+	toogleNav.classList.toggle('toggle');
+});
