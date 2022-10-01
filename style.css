@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
 
 :root {
+	scroll-behavior: smooth;
 	--skin-color: rgb(253, 38, 0);
 	--bg-black-900: #f2f2fc;
 	--bg-black-100: #fdf9ff;
@@ -176,12 +177,12 @@ ul {
 }
 .aside .nav-toggler {
 	height: 40px;
-	width: 45px;
+	width: 40px;
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
 	position: fixed;
-	left: 300px;
-	top: 20px;
+	left: 327px;
+	top: 44px;
 	border-radius: 5px;
 	background: var(--bg-black-100);
 	display: none;
@@ -361,6 +362,9 @@ h3.my-profession {
 	flex: 0 0 40%;
 	max-width: 40%;
 	margin-top: 40px;
+}
+.about .about-content .skills.open {
+	transition: all 1.3s ease;
 }
 .about .about-content .skills .skill-item {
 	margin-bottom: 25px;

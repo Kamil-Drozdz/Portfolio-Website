@@ -105,3 +105,45 @@ toogleNav.addEventListener('click', () => {
 
 	toogleNav.classList.toggle('toggle');
 });
+
+//effect show element on scroll
+document.addEventListener('scroll', () => {
+	if (window.pageYOffset > 670) {
+		skills.classList.add('open');
+		skills.style.display = 'block';
+	} else {
+		skills.style.display = 'none';
+	}
+});
+
+//music
+const music = document.querySelector('.music');
+const switchMusicIcon = document.querySelector('.switcher-music');
+let isPlaying = false;
+
+switchMusicIcon.addEventListener('click', () => {
+	switchMusicIcon.querySelector('i').classList.toggle('fa-pause');
+	switchMusicIcon.querySelector('i').classList.toggle('fa-music');
+});
+window.addEventListener('load', () => {
+	if (document.body.classList.contains('.switcher-music')) {
+		switchMusicIcon.querySelector('i').classList.add('fa-pause');
+	} else {
+		switchMusicIcon.querySelector('i').classList.add('fa-music');
+	}
+});
+
+function togglePlay() {
+	if (isPlaying) {
+		music.pause();
+	} else {
+		music.play();
+	}
+}
+
+music.onplaying = function () {
+	isPlaying = true;
+};
+music.onpause = function () {
+	isPlaying = false;
+};

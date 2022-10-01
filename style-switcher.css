@@ -3,7 +3,7 @@
 	right: 0px;
 	top: 0px;
 	padding: 15px;
-	width: 200px;
+	width: 250px;
 	border: 1px solid var(--bg-black-50);
 	background-color: var(--bg-black-100);
 	z-index: 1;
@@ -37,7 +37,19 @@
 	line-height: 40px;
 }
 .style-switcher .day-night {
-	top: 62px;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	font-size: 20px;
+	background-color: var(--bg-black-100);
+	color: var(--text-black-900);
+	border: 1px solid var(--bg-black-50);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	top: 45px;
+	margin-right: -225px;
 }
 .style-switcher h4 {
 	margin: 0 0 10px;
@@ -74,7 +86,7 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border-radius: 50%;
-	top: 69px;
+	top: 45px;
 	margin-left: 70px;
 }
 .style-switcher .reset:hover {
@@ -82,4 +94,29 @@
 }
 .style-switcher .reset .fa {
 	margin-top: 10px;
+}
+
+.player {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	font-size: 20px;
+	background-color: var(--bg-black-100);
+	color: var(--text-black-900);
+	border: 1px solid var(--bg-black-50);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	top: 45px;
+	margin-left: 120px;
+}
+.player:hover {
+	background-color: var(--skin-color);
+}
+.player .fa {
+	margin-top: 10px;
+}
+.fa-music::before {
+	padding-right: 2px;
 }
