@@ -23,6 +23,7 @@ body {
 	line-height: 1.5;
 	font-size: 16px;
 	font-family: 'Oswald', sans-serif;
+	background-color: var(--bg-black-900);
 }
 * {
 	margin: 0;
@@ -40,7 +41,7 @@ ul {
 }
 .section {
 	background: var(--bg-black-900);
-	min-height: 90vh;
+	min-height: 100vh;
 	display: block;
 	padding: 0 30px;
 	opacity: 1;
@@ -181,7 +182,7 @@ ul {
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
 	position: fixed;
-	left: 327px;
+	left: 32px;
 	top: 44px;
 	border-radius: 5px;
 	background: var(--bg-black-100);
@@ -501,7 +502,7 @@ h3.my-profession {
 }
 /* services*/
 .service .container {
-	padding-top: -320px;
+	margin-top: 60px;
 }
 .service .service-item {
 	margin-bottom: 30px;
@@ -554,6 +555,7 @@ h3.my-profession {
 }
 /*  porftolio*/
 .portfolio .container {
+	margin-top: 60px;
 	padding-bottom: 40px;
 }
 .portfolio .porfolio-heading {
@@ -594,8 +596,8 @@ h3.my-profession {
 	margin-bottom: 60px;
 }
 .contact .contact-info-item {
-	flex: 0 0 25%;
-	max-width: 25%;
+	flex: 0 0 33%;
+	max-width: 33%;
 	text-align: center;
 	margin-bottom: 60px;
 }
@@ -696,33 +698,22 @@ h3.my-profession {
 	.home .home-img {
 		display: none;
 	}
-}
-@media (max-width: 767px) {
-	.contact .contact-form .col-6,
-	.contact .contact-info-item,
-	.portfolio .portfolio-item,
-	.service .service-item,
-	.about .about-content .experience,
-	.about .about-content .education,
-	.about .about-content .skills,
-	.about .about-content .personal-info {
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
+
 	.aside .nav-toggler {
 		display: block;
-		position: fixed;
+		position: absolute;
 		cursor: pointer;
 		transform: translate(-5%, -50%);
 		z-index: 2;
 		transition: all 0.7s ease;
 		text-align: center;
-		margin-top: 38px;
-		margin-left: 317px;
+		top: 37px;
+		left: 630px;
 	}
+
 	.aside .nav {
 		margin-top: 100px;
-		position: fixed;
+		position: absolute;
 		display: flex;
 		background: var(--text-black-700);
 		height: 100vh;
@@ -734,10 +725,17 @@ h3.my-profession {
 		pointer-events: none;
 	}
 	.aside .nav.open {
-		clip-path: circle(600px at 90% -10%);
-		-webkit-clip-path: circle(800px at 90% -10%);
-		pointer-events: all;
-		position: fixed;
+		padding-top: 100px;
+		height: 100vh;
+		max-width: 300px;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		margin-left: -40px;
+		padding-left: 40px;
+		transition: transform 0.5s ease-in-out;
+		box-shadow: 5px 0px 10px 0px #aaa;
+		overflow: scroll;
 	}
 	.aside .nav li {
 		opacity: 0;
@@ -770,6 +768,19 @@ h3.my-profession {
 	}
 	.main-container {
 		margin-top: -30px;
+	}
+}
+@media (max-width: 767px) {
+	.contact .contact-form .col-6,
+	.contact .contact-info-item,
+	.portfolio .portfolio-item,
+	.service .service-item,
+	.about .about-content .experience,
+	.about .about-content .education,
+	.about .about-content .skills,
+	.about .about-content .personal-info {
+		flex: 0 0 50%;
+		max-width: 50%;
 	}
 }
 
