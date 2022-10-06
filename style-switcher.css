@@ -31,7 +31,7 @@
 }
 .style-switcher.open {
 	transform: translateX(-25px);
-	transition: 1s;
+	transition: 0.5s;
 }
 .style-switcher .s-icon i {
 	line-height: 40px;
@@ -84,7 +84,7 @@
 	color: var(--text-black-900);
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 	border-radius: 50%;
 	top: 45px;
 	margin-left: 70px;
@@ -106,7 +106,7 @@
 	color: var(--text-black-900);
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 	border-radius: 50%;
 	top: 45px;
 	margin-left: 120px;

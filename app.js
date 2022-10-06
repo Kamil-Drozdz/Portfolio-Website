@@ -19,12 +19,11 @@ let mainNavLinks = document.querySelectorAll('.aside .nav li a');
 let mainSections = document.querySelectorAll('.aside .nav');
 
 window.addEventListener('scroll', () => {
-	let fromTop = window.scrollY;
+	let fromTop = window.scrollY+50;
 
 	mainNavLinks.forEach(link => {
 		let section = document.querySelector(link.hash);
-
-		if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+		if (section.offsetTop <= fromTop === section.offsetTop + section.offsetHeight > fromTop) {
 			link.classList.add('active');
 		} else {
 			link.classList.remove('active');
