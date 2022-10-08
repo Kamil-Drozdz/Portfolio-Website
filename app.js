@@ -19,7 +19,7 @@ let mainNavLinks = document.querySelectorAll('.aside .nav li a');
 let mainSections = document.querySelectorAll('.aside .nav');
 
 window.addEventListener('scroll', () => {
-	let fromTop = window.scrollY+50;
+	let fromTop = window.scrollY + 50;
 
 	mainNavLinks.forEach(link => {
 		let section = document.querySelector(link.hash);
@@ -146,3 +146,22 @@ music.onplaying = function () {
 music.onpause = function () {
 	isPlaying = false;
 };
+
+//modal look history
+var modal = document.querySelector('.modal');
+var trigger = document.querySelector('.trigger');
+var closeButton = document.querySelector('.close-button');
+
+function toggleModal() {
+	modal.classList.toggle('show-modal');
+}
+
+function windowOnClick(event) {
+	if (event.target === modal) {
+		toggleModal();
+	}
+}
+
+trigger.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);

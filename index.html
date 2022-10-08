@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamil Dróżdż - Front- end developer</title>
+    <link rel="icon" href="./assets/logo-modified.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-switcher.css">
     <link rel="stylesheet" href="loading-page.css">
@@ -21,8 +22,10 @@
             <div class="logo">
                 <a href="#">Kamil</a>
             </div>
-            <div class="nav-toggler">
-                <span></span>
+            <div type="checkbox" class="nav-toggler">
+                <span class="line-uno"></span>
+                <span class="line-duo"></span>
+                <span class="line-tres"></span>
             </div>
             <ul class="nav">
                 <li><a href="#home" class="active"><i class="fa fa-home"></i> Start</a></li>
@@ -72,7 +75,7 @@
                                     <h3 class="hello">Cześć, jestem <span class="name">Kamil Dróżdż</span></h3>
                                     <h3 class="my-profession">jestem <span class="typing">Web Developerem</span></h3>
                                     <p>Jeżeli interesuje Ciebie więcej informacji o mnie zapraszam niżej z pewnością
-                                        dowiesz się coś...
+                                        dowiesz się wszystkiego co Ciebie ciekawi...
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +101,18 @@
                                             <p>Miejscowość: <span>Warszawa</span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Wcześniejsza kariera w IT: <span id="look-history">Zobacz historie</span>
+                                            <p>Wcześniejsza kariera w IT:
+                                                <button class="trigger">Zobacz
+                                                    historie </button>
+                                            <div class="modal">
+                                                <div class="modal-content">
+                                                    <h3>Możesz być pierwszym który mnie zatrudni!</h3>
+                                                    <img src="./assets/pngwing.com.png">
+                                                    </img>
+                                                    <button class="close-button">Dobra!</button>
+                                                </div>
+                                            </div>
+
                                             </p>
                                         </div>
                                     </div>
@@ -112,35 +126,42 @@
                                 </div>
                                 <div class="skills padd-15">
                                     <div class="skill-item padd-15">
-                                        <h5>React</h5>
+                                        <h5>React<img class="skill-icon" src="./assets/react-pngrepo-com.png"></img>
+                                        </h5>
                                         <div class="progress">
                                             <div class="progress-in progress-in-React"></div>
                                             <div class="skill-percent skill-percent">30%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item padd-15">
-                                        <h5>JavaScript</h5>
+                                        <h5>JavaScript<img class="skill-icon" src="./assets/js-svgrepo-com.svg"></img>
+                                        </h5>
                                         <div class="progress">
                                             <div class="progress-in progress-in-JS"></div>
                                             <div class="skill-percent skill-percent">30%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item padd-15">
-                                        <h5>CSS(Sass,tailwind)</h5>
+                                        <h5>CSS(Sass,tailwind)<img class="skill-icon"
+                                                src="./assets/css-pngrepo-com.png"></img><img class="skill-icon"
+                                                src="./assets/sass-pngrepo-com.png"></img><img class="skill-icon"
+                                                src="./assets/tailwindcss-icon-pngrepo-com.png"></img></h5>
                                         <div class="progress">
                                             <div class="progress-in progress-in-CSS"></div>
                                             <div class="skill-percent skill-percent">60%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item padd-15">
-                                        <h5>HTML5(w tym BEM)</h5>
+                                        <h5>HTML5(w tym BEM)<img class="skill-icon"
+                                                src="./assets/html-pngrepo-com.png"></img></h5>
                                         <div class="progress">
                                             <div class="progress-in progress-in-HTML"></div>
                                             <div class="skill-percent skill-percent">60%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item padd-15">
-                                        <h5>RWD</h5>
+                                        <h5>RWD<img class="skill-icon" src="./assets/responsive-pngrepo-com.png"></img>
+                                        </h5>
                                         <div class="progress ">
                                             <div class="progress-in progress-in-RWD"></div>
                                             <div class="skill-percent">80%</div>
@@ -473,10 +494,8 @@
     </div>
     </div>
     <!--Loading screen-->
-    <div class="loader section-left"></div>
-    <div class="loader section-right"></div>
     <div id="loading-wrapper">
-        <div id="loading-text"><img class='loading-img' src="./images/logo-modified.png"></img></div>
+        <div id="loading-text"><img class='loading-img' src="./assets/logo-modified.png"></img></div>
         <div id="loading-content"></div>
         <div class="container">
             <h1>Losowe cytaty wielkich ludzi...</h1>
@@ -489,6 +508,8 @@
         <!--typing scirpt-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
             referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "12a807bf-d661-456a-9ffd-1e99d1456494"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+        </script>
         <script src="./style-switcher.js"></script>
         <script src="./app.js"></script>
 </body>
