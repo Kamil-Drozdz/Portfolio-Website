@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 	--skin-color: rgb(253, 38, 0);
 	--bg-black-900: #f2f2fc;
 	--bg-black-100: #fdf9ff;
@@ -51,10 +51,6 @@ ul {
 	max-width: 1200px;
 	width: 100%;
 	margin: auto;
-}
-.container h1 {
-	color: white;
-	margin-bottom: 40px;
 }
 .section .container {
 	padding-top: 120px;
@@ -131,7 +127,8 @@ ul {
 	position: sticky;
 	top: 0;
 	height: 100%;
-	border-right: 1px solid var(--bg-black-50);
+	box-shadow: 0px 1px 23px var(--skin-color);
+
 	display: inline-block;
 	justify-content: center;
 	align-items: center;
@@ -144,15 +141,14 @@ ul {
 	text-transform: capitalize;
 }
 .aside .logo a {
-	font-family: 'Caveat', cursive;
-	color: var(--bg-black-900);
+	font-family: 'Dancing Script', cursive;
+	color: var(--text-black-900);
 	font-weight: 700;
 	margin-left: 60px;
 	padding: 15px 20px;
 	font-size: 30px;
 	letter-spacing: 5px;
 	position: relative;
-	color: rgb(14, 4, 4);
 }
 
 .aside .logo a::before {
@@ -177,7 +173,7 @@ ul {
 }
 .aside .nav-toggler {
 	height: 40px;
-	width: 40px;
+	width: 100%;
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
 	position: fixed;
@@ -255,6 +251,9 @@ ul {
 	color: var(--skin-color);
 	border-bottom: 1px solid var(--skin-color);
 	padding: 0;
+	font-size: 22px;
+	font-weight: 600;
+	padding: 5px 5px;
 }
 /*home */
 .home {
@@ -273,7 +272,7 @@ h3.hello {
 }
 h3.hello span {
 	font-family: 'Caveat', cursive;
-	font-size: 35px;
+	font-size: 30px;
 }
 h3.my-profession {
 	font-size: 30px;
@@ -364,12 +363,11 @@ h3.my-profession {
 	color: var(--skin-color);
 	cursor: pointer;
 	text-align: center;
-	background: var(--text-black-900);
-	outline: none;
+	background: var(--bg-black-50);
 	border: none;
-	padding: 4px;
+	padding: 5px;
 	border-radius: 6px;
-	font-family: cursive;
+	font-family: 'Oswald', sans-serif;
 }
 
 .modal {
@@ -383,7 +381,7 @@ h3.my-profession {
 	visibility: hidden;
 	transform: scale(1.1);
 	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-	z-index: 101;
+	z-index: 1;
 }
 .modal-content {
 	position: absolute;
@@ -410,7 +408,7 @@ h3.my-profession {
 	line-height: 1.5rem;
 	text-align: center;
 	cursor: pointer;
-	border-radius: 6px;
+	border-radius: 10px;
 	background-color: lightgray;
 }
 .close-button:hover {
@@ -447,7 +445,7 @@ h3.my-profession {
 }
 .about .about-content .skills .skill-icon {
 	max-width: 20px;
-	margin-left: 10px;
+	margin-left: 6px;
 }
 .about .about-content .skills .skill-item h5 {
 	line-height: 40px;
@@ -742,7 +740,7 @@ h3.my-profession {
 
 @media (max-width: 1199px) {
 	.aside {
-		margin-top: -270px;
+		width: 100%;
 	}
 
 	.main-content {
@@ -771,20 +769,15 @@ h3.my-profession {
 	.home .home-img {
 		display: none;
 	}
-
+	h3.hello {
+		font-size: 24px;
+		white-space: nowrap;
+	}
+	h3.my-profession {
+		font-size: 22px;
+	}
 	.aside .logo {
 		display: none;
-	}
-
-	.aside .nav-toggler {
-		position: absolute;
-		display: block;
-		top: 17px;
-		text-align: center;
-		margin-left: 240px;
-		height: 40px;
-		width: 40px;
-		z-index: 1;
 	}
 	.aside .nav {
 		padding-top: 0;
@@ -792,19 +785,29 @@ h3.my-profession {
 		flex-direction: column;
 		justify-content: space-evenly;
 		border-radius: 20px;
+		width: 100%;
 	}
 	.aside .nav.open {
 		padding-top: 5px;
-		position: fixed;
+		position: absolute;
 		background-color: var(--bg-black-100);
 		display: flex;
 		flex-direction: column;
 		margin: 0;
+		border: 1px solid var(--bg-black-50);
 		transition: transform 0.5s ease-in-out;
-		overflow: scroll;
-		top: 75px;
+		top: 60px;
 		width: 124px;
-		right: 10px;
+		left: 10px;
+		z-index: 1;
+	}
+	.aside .nav-toggler {
+		display: inline-block;
+		top: 15px;
+		left: 10px;
+		text-align: center;
+		height: 40px;
+		width: 40px;
 		z-index: 1;
 	}
 	.aside .nav li a {
@@ -813,28 +816,32 @@ h3.my-profession {
 		margin-left: 20px;
 		text-align: center;
 	}
+	.aside .nav li a.active {
+		font-size: 17px;
+		margin-left: 20px;
+	}
 	.aside .nav li.fade {
 		opacity: 1;
-		margin: 0;
+		margin: 0px;
+		padding: 0px;
 	}
 	.aside .nav li:nth-child(1) {
-		transition: all 0.5s ease 0.2s;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.aside .nav li:nth-child(2) {
-		transition: all 0.5s ease 0.4s;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.nav-links li:nth-child(3) {
-		transition: all 0.5s ease 0.6s;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.aside .nav li:nth-child(4) {
-		transition: all 0.5s ease 0.7s;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.aside .nav li:nth-child(5) {
-		transition: all 0.5s ease 0.8s;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.aside .nav li:nth-child(6) {
-		transition: all 0.5s ease 0.9s;
-		margin: 0;
+		transition: all 0.5s ease-in 0.2s;
 	}
 	.portfolio-item {
 		flex: 0 0 100%;
@@ -852,7 +859,23 @@ h3.my-profession {
 		left: 166px;
 	}
 	#loading-wrapper .quote {
-		top: -30px;
+		margin: 10px;
+		font-size: 15px;
+	}
+	#loading-wrapper .author {
+		font-size: 15px;
+		padding: 10px;
+		margin-bottom: -20px;
+	}
+	#container {
+		margin-top: -130px;
+		padding: 15px;
+	}
+	#container h1 {
+		margin: 10px;
+		padding-top: -225px;
+		color: white;
+		font-size: 25px !important;
 	}
 }
 @media (max-width: 767px) {

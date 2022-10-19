@@ -1,9 +1,9 @@
 .style-switcher {
 	position: fixed;
 	right: 0px;
-	top: 0px;
+	top: 2px;
 	padding: 15px;
-	width: 250px;
+	width: 240px;
 	border: 1px solid var(--bg-black-50);
 	background-color: var(--bg-black-100);
 	z-index: 1;
@@ -30,7 +30,7 @@
 	background-color: var(--skin-color);
 }
 .style-switcher.open {
-	transform: translateX(-25px);
+	transform: translateX(-2px);
 	transition: 0.5s;
 }
 .style-switcher .s-icon i {

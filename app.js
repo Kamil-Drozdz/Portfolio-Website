@@ -73,7 +73,8 @@ window.addEventListener('load', () => {
 });
 
 // adds text in js
-let lowercase = (document.getElementById('text').innerHTML = 'Zmień kolor na jaki chcesz');
+let textSwitcher = 'Zmień kolor na jaki chcesz!'.toLowerCase();
+document.getElementById('text').innerHTML = textSwitcher;
 
 //random quotes in loading screen
 
@@ -98,10 +99,11 @@ const toogleNav = document.querySelector('.aside .nav-toggler');
 const links = document.querySelectorAll('.aside .nav li');
 toogleNav.addEventListener('click', () => {
 	navLinks.classList.toggle('open');
-	links.forEach(link => {
-		link.classList.toggle('fade');
+	setTimeout(() => {
+		links.forEach(link => {
+			link.classList.toggle('fade');
+		});
 	});
-
 	toogleNav.classList.toggle('toggle');
 });
 
