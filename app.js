@@ -165,7 +165,7 @@ window.addEventListener('click', windowOnClick);
 
 function changeLanguageTo(lang) {
 	setTimeout(function () {
-		if (lang == 'EN') {
+		if (lang == 'PL') {
 			window.location.href = '/indexEN.html';
 		} else {
 			window.location.href = '/index.html';
@@ -182,7 +182,7 @@ function toggleIconLang() {
 	}
 }
 
-function toggleAll() {
+function toggleAll(lang) {
 	toggleIconLang();
-	changeLanguageTo();
+	changeLanguageTo(lang);
 }

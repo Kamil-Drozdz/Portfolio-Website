@@ -2,6 +2,13 @@
 	position: fixed;
 	right: 0px;
 	top: 2px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+	align-content: flex-start;
+	height: 100px;
 	padding: 15px;
 	width: 280px;
 	border: 1px solid var(--bg-black-50);
@@ -20,8 +27,9 @@
 	background-color: var(--bg-black-100);
 	color: var(--text-black-900);
 	right: 100%;
+	top: 13px;
+	margin-right: 4px;
 	border: 1px solid var(--bg-black-50);
-	margin-right: 25px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border-radius: 50%;
@@ -58,11 +66,7 @@
 	font-weight: 600;
 	text-transform: capitalize;
 }
-.style-switcher .colors {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
+
 .style-switcher .colors span {
 	display: inline-block;
 	height: 30px;
@@ -95,6 +99,11 @@
 .style-switcher .reset .fa {
 	margin-top: 10px;
 }
+.day-night .fa {
+	grid-area: 1 / 1 / 2 / 2;
+	animation: wave 12s ease infinite;
+	animation-duration: 2.5s infinite;
+}
 
 .player {
 	position: absolute;
@@ -115,13 +124,15 @@
 	background-color: var(--skin-color);
 }
 .player .fa {
+	animation: wave 6s ease-in-out infinite;
+	animation-duration: 2.5s infinite;
 	margin-top: 10px;
+	grid-area: 1 / 1 / 2 / 5;
 }
-.fa-music::before {
+.fa-music:before {
 	padding-right: 2px;
 }
 .nav__switch-lang div {
-	content: 'PL';
 	position: absolute;
 	height: 40px;
 	width: 40px;
@@ -145,4 +156,38 @@
 	padding-left: 1px;
 	text-align: center;
 	top: 20px;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10% {
+		transform: rotate(20deg);
+	}
+
+	20% {
+		transform: rotate(-10deg);
+	}
+
+	30% {
+		transform: rotate(20deg);
+	}
+
+	40% {
+		transform: rotate(-6deg);
+	}
+
+	50% {
+		transform: rotate(12deg);
+	}
+
+	60% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
 }

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 	--skin-color: rgb(253, 38, 0);
 	--bg-black-900: #f2f2fc;
 	--bg-black-100: #fdf9ff;
@@ -271,7 +271,7 @@ h3.hello {
 	margin: 15px 0;
 }
 h3.hello span {
-	font-family: 'Caveat', cursive;
+	font-family: 'Dancing Script', cursive;
 	font-size: 30px;
 }
 h3.my-profession {
@@ -799,7 +799,7 @@ h3.my-profession {
 		top: 60px;
 		width: 124px;
 		left: 10px;
-		z-index: 1;
+		z-index: 2;
 	}
 	.aside .nav-toggler {
 		display: inline-block;
