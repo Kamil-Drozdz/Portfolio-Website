@@ -71,11 +71,6 @@ window.addEventListener('load', () => {
 		document.body.removeChild(load_screen);
 	}, 3050);
 });
-
-// adds text in js
-let textSwitcher = 'Zmień kolor na jaki chcesz!'.toLowerCase();
-document.getElementById('text').innerHTML = textSwitcher;
-
 //random quotes in loading screen
 
 function generateQuote() {
@@ -167,3 +162,27 @@ function windowOnClick(event) {
 trigger.addEventListener('click', toggleModal);
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
+
+function changeLanguageTo(lang) {
+	setTimeout(function () {
+		if (lang == 'EN') {
+			window.location.href = '/indexEN.html';
+		} else {
+			window.location.href = '/index.html';
+		}
+	}, 350);
+}
+
+function toggleIconLang() {
+	var iconLang = document.getElementById('iconLang');
+	if (iconLang.innerHTML === 'PL') {
+		iconLang.innerHTML = 'EN';
+	} else {
+		iconLang.innerHTML = 'PL';
+	}
+}
+
+function toggleAll() {
+	toggleIconLang();
+	changeLanguageTo();
+}

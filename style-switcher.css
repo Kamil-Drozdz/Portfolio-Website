@@ -3,7 +3,7 @@
 	right: 0px;
 	top: 2px;
 	padding: 15px;
-	width: 240px;
+	width: 280px;
 	border: 1px solid var(--bg-black-50);
 	background-color: var(--bg-black-100);
 	z-index: 1;
@@ -119,4 +119,30 @@
 }
 .fa-music::before {
 	padding-right: 2px;
+}
+.nav__switch-lang div {
+	content: 'PL';
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+	background-color: var(--bg-black-100);
+	color: var(--text-black-900);
+	border: 1px solid var(--bg-black-50);
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.5s ease;
+	border-radius: 50%;
+	right: 5px;
+	margin-top: 25px;
+	font-weight: 700;
+}
+.nav__switch-lang div:hover {
+	background-color: var(--skin-color);
+}
+#iconLang {
+	padding-top: 3px;
+	padding-left: 1px;
+	text-align: center;
+	top: 20px;
 }
