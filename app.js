@@ -19,14 +19,13 @@ let mainNavLinks = document.querySelectorAll('.aside .nav li a');
 let mainSections = document.querySelectorAll('.aside .nav');
 
 window.addEventListener('scroll', () => {
-	let fromTop = window.scrollY + 50;
-
-	mainNavLinks.forEach(link => {
-		let section = document.querySelector(link.hash);
-		if (section.offsetTop <= fromTop === section.offsetTop + section.offsetHeight > fromTop) {
-			link.classList.add('active');
+	mainNavLinks.forEach(links => {
+		let fromTop = window.scrollY + 270;
+		let section = document.querySelector(links.hash);
+		if (section.offsetTop <= fromTop === section.offsetTop + section.offsetHeight >= fromTop) {
+			links.classList.add('active');
 		} else {
-			link.classList.remove('active');
+			links.classList.remove('active');
 		}
 	});
 });
@@ -69,7 +68,7 @@ window.addEventListener('load', () => {
 	let load_screen = document.getElementById('loading-wrapper');
 	setTimeout(() => {
 		document.body.removeChild(load_screen);
-	}, 3050);
+	}, 3350);
 });
 //random quotes in loading screen
 
@@ -92,6 +91,7 @@ generateQuote();
 const navLinks = document.querySelector('.aside .nav');
 const toogleNav = document.querySelector('.aside .nav-toggler');
 const links = document.querySelectorAll('.aside .nav li');
+
 toogleNav.addEventListener('click', () => {
 	navLinks.classList.toggle('open');
 	setTimeout(() => {
@@ -164,13 +164,11 @@ closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);
 
 function changeLanguageTo(lang) {
-	setTimeout(function () {
-		if (lang == 'PL') {
-			window.location.href = '/indexEN.html';
-		} else {
-			window.location.href = '/index.html';
-		}
-	}, 350);
+	if (lang == 'PL') {
+		location.assign('/en.html');
+	} else {
+		location.assign('/index.html');
+	}
 }
 
 function toggleIconLang() {

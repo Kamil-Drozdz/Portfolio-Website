@@ -447,6 +447,11 @@ h3.my-profession {
 	max-width: 20px;
 	margin-left: 6px;
 }
+.about .about-content .skills .skill-iconRWD {
+	max-width: 20px;
+	margin-left: 6px;
+	filter: opacity(0.5) drop-shadow(0 0 0#ffffff);
+}
 .about .about-content .skills .skill-item h5 {
 	line-height: 40px;
 	font-weight: 600;
@@ -593,9 +598,12 @@ h3.my-profession {
 	padding: 30px 15px;
 	text-align: center;
 	transition: all 0.3s ease-in;
+	opacity: 75%;
 }
 .service .service-item .service-item-inner:hover {
-	box-shadow: 0 0 20px var(--skin-color, 0.3);
+	box-shadow: 0 0 10px var(--skin-color, 0.3);
+	opacity: 100%;
+	transition: opacity 0.1s;
 }
 .service .service-item .service-item-inner .icon {
 	height: 60px;
