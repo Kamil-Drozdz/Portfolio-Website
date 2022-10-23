@@ -868,32 +868,9 @@ h3.my-profession {
 	.main-container {
 		margin-top: -30px;
 	}
-	#loading-wrapper .loading-img {
-		margin-top: 113px;
-		left: -38px;
-	}
-	#loading-wrapper #loading-content {
-		margin-top: 35px;
-		left: 166px;
-	}
-	#loading-wrapper .quote {
-		margin: 10px;
-		font-size: 15px;
-	}
-	#loading-wrapper .author {
-		font-size: 15px;
-		padding: 10px;
-		margin-bottom: -20px;
-	}
 	#container {
-		margin-top: -130px;
-		padding: 15px;
-	}
-	#container h1 {
-		margin: 10px;
-		padding-top: -225px;
-		color: white;
-		font-size: 25px !important;
+		font-size: 0.8em !important;
+		margin: auto;
 	}
 }
 @media (max-width: 767px) {
@@ -920,18 +897,6 @@ h3.my-profession {
 .portfolio .portfolio-item {
 	flex: 0 0 33%;
 	max-width: 33%;
-}
-.quote .author {
-	margin-top: 20px;
-}
-#loading-content {
-	display: block;
-	position: relative;
-	left: 49%;
-	top: 50%;
-	width: 237px;
-	height: 23px;
-	margin: 0 0 -85px;
 }
 
 /* animation frames*/

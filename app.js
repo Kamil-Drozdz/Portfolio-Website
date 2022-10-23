@@ -65,9 +65,9 @@ window.addEventListener('load', () => {
 });
 /* preloader screen */
 window.addEventListener('load', () => {
-	let load_screen = document.getElementById('loading-wrapper');
+	document.getElementById('preloader');
 	setTimeout(() => {
-		document.body.removeChild(load_screen);
+		preloader.classList.add('loaded');
 	}, 3350);
 });
 //random quotes in loading screen
