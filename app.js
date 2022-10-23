@@ -87,19 +87,14 @@ function generateQuote() {
 }
 generateQuote();
 
-//animation responsive toogle nav
+//animation responsive toggle nav
 const navLinks = document.querySelector('.aside .nav');
-const toogleNav = document.querySelector('.aside .nav-toggler');
+const toggleNav = document.querySelector('.aside .nav-toggler');
 const links = document.querySelectorAll('.aside .nav li');
 
-toogleNav.addEventListener('click', () => {
+toggleNav.addEventListener('click', () => {
 	navLinks.classList.toggle('open');
-	setTimeout(() => {
-		links.forEach(link => {
-			link.classList.toggle('fade');
-		});
-	});
-	toogleNav.classList.toggle('toggle');
+	toggleNav.classList.toggle('is-active');
 });
 
 //effect show element on scroll
@@ -165,9 +160,9 @@ window.addEventListener('click', windowOnClick);
 
 function changeLanguageTo(lang) {
 	if (lang == 'PL') {
-		location.assign('/en.html');
+		window.location.href = 'https://kamil-drozdz.netlify.app/en/';
 	} else {
-		location.assign('/index.html');
+		window.location.href = 'https://kamil-drozdz.netlify.app/';
 	}
 }
 

@@ -31,7 +31,6 @@
 	margin-right: 4px;
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
-	transition: all 0.3s ease;
 	border-radius: 50%;
 }
 .style-switcher .s-icon:hover {

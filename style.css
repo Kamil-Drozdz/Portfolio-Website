@@ -127,8 +127,7 @@ ul {
 	position: sticky;
 	top: 0;
 	height: 100%;
-	box-shadow: 0px 1px 23px var(--skin-color);
-
+	box-shadow: 0px 1px 13px var(--skin-color);
 	display: inline-block;
 	justify-content: center;
 	align-items: center;
@@ -179,7 +178,7 @@ ul {
 	position: fixed;
 	left: 32px;
 	top: 44px;
-	border-radius: 5px;
+	border-radius: 50%;
 	background: var(--bg-black-100);
 	display: none;
 	align-items: center;
@@ -188,6 +187,18 @@ ul {
 	-moz-appearance: none;
 	z-index: 2;
 	outline: none;
+}
+.aside .nav-toggler.is-active {
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition-delay: 0.6s;
+	-o-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .aside .nav-toggler .line-uno {
@@ -218,14 +229,29 @@ ul {
 	left: 10px;
 	transition: all 0.3s;
 }
-.aside .nav-toggler:checked + .aside .nav-toggler .line-duo {
-	transform: translateY(-20px) rotate(-45deg);
+.aside .nav-toggler.is-active .line-uno {
+	width: 0px;
 }
-.aside .nav-toggler:checked + .aside .nav-toggler .line-uno {
-	opacity: 0;
+
+.aside .nav-toggler.is-active .line-duo,
+.aside .nav-toggler.is-active .line-tres {
+	-webkit-transition-delay: 0.3s;
+	-o-transition-delay: 0.3s;
+	transition-delay: 0.3s;
 }
-.aside .nav-toggler:checked + .aside .nav-toggler .line-tres {
-	transform: translateY(20px) rotate(45deg);
+
+.aside .nav-toggler.is-active .line-duo {
+	-webkit-transform: translateY(9px);
+	-ms-transform: translateY(9px);
+	-o-transform: translateY(9px);
+	transform: translateY(9px);
+}
+
+.aside .nav-toggler.is-active .line-tres {
+	-webkit-transform: translateY(-6px) rotate(90deg);
+	-ms-transform: translateY(-6px) rotate(90deg);
+	-o-transform: translateY(-6x) rotate(90deg);
+	transform: translateY(-6px) rotate(90deg);
 }
 .aside .nav {
 	margin-top: 32px;
@@ -365,7 +391,9 @@ h3.my-profession {
 	text-align: center;
 	background: var(--bg-black-50);
 	border: none;
-	padding: 5px;
+	font-size: 16px;
+	padding: 8px;
+	letter-spacing: 1px;
 	border-radius: 6px;
 	font-family: 'Oswald', sans-serif;
 }
@@ -612,7 +640,7 @@ h3.my-profession {
 	display: block;
 	margin: 0 auto 30px;
 	text-align: center;
-	transition: all 0.3s ease;
+	transition: all 0.1s ease-in;
 }
 .service .service-item .service-item-inner .icon .fa {
 	font-size: 40px;
@@ -623,6 +651,7 @@ h3.my-profession {
 	background-color: var(--skin-color);
 }
 .service .service-item .service-item-inner:hover .icon .fa {
+	transition: all 0.3s ease-in;
 	font-size: 25px;
 	color: #ffffff;
 }
@@ -788,26 +817,30 @@ h3.my-profession {
 		display: none;
 	}
 	.aside .nav {
-		padding-top: 0;
-		display: none;
+		display: flex;
 		flex-direction: column;
+		opacity: 0;
+		position: absolute;
+		margin-left: 0px;
+		left: -300px;
+		padding-top: 0;
 		justify-content: space-evenly;
-		border-radius: 20px;
+		border-radius: 5px;
 		width: 100%;
 	}
 	.aside .nav.open {
 		padding-top: 5px;
-		position: absolute;
 		background-color: var(--bg-black-100);
 		display: flex;
 		flex-direction: column;
+		opacity: 1;
 		margin: 0;
 		border: 1px solid var(--bg-black-50);
-		transition: transform 0.5s ease-in-out;
-		top: 60px;
+		top: 58px;
 		width: 124px;
-		left: 10px;
+		left: 2px;
 		z-index: 2;
+		transition: all 0.9s ease;
 	}
 	.aside .nav-toggler {
 		display: inline-block;
@@ -828,29 +861,6 @@ h3.my-profession {
 		font-size: 17px;
 		margin-left: 20px;
 	}
-	.aside .nav li.fade {
-		opacity: 1;
-		margin: 0px;
-		padding: 0px;
-	}
-	.aside .nav li:nth-child(1) {
-		transition: all 0.5s ease-in 0.2s;
-	}
-	.aside .nav li:nth-child(2) {
-		transition: all 0.5s ease-in 0.2s;
-	}
-	.nav-links li:nth-child(3) {
-		transition: all 0.5s ease-in 0.2s;
-	}
-	.aside .nav li:nth-child(4) {
-		transition: all 0.5s ease-in 0.2s;
-	}
-	.aside .nav li:nth-child(5) {
-		transition: all 0.5s ease-in 0.2s;
-	}
-	.aside .nav li:nth-child(6) {
-		transition: all 0.5s ease-in 0.2s;
-	}
 	.portfolio-item {
 		flex: 0 0 100%;
 		max-width: 100%;
@@ -860,7 +870,7 @@ h3.my-profession {
 	}
 	#loading-wrapper .loading-img {
 		margin-top: 113px;
-		left: -48px;
+		left: -38px;
 	}
 	#loading-wrapper #loading-content {
 		margin-top: 35px;
@@ -921,7 +931,7 @@ h3.my-profession {
 	top: 50%;
 	width: 237px;
 	height: 23px;
-	margin: -8523px 0 0 -85px;
+	margin: 0 0 -85px;
 }
 
 /* animation frames*/
