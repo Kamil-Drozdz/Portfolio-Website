@@ -32,7 +32,7 @@ window.addEventListener('scroll', () => {
 
 /*Typing animation */
 let typed = new Typed('.typing', {
-	strings: ['Web Designerem', 'Web Developerem', 'Front-end Developerem'],
+	strings: ['Web Designer', 'Web Developer', 'Front-end Developer'],
 	typeSpeed: 100,
 	BackSpeed: 60,
 	loop: true,
@@ -160,9 +160,9 @@ window.addEventListener('click', windowOnClick);
 
 function changeLanguageTo(lang) {
 	if (lang == 'PL') {
-		window.location.href = 'https://kamil-drozdz.netlify.app/en/';
+		window.location.href = 'https://www.kamildrozdz.pl/en.html';
 	} else {
-		window.location.href = 'https://kamil-drozdz.netlify.app/';
+		window.location.href = 'https://www.kamildrozdz.pl/';
 	}
 }
 

@@ -121,9 +121,9 @@
 	margin: auto;
 	text-align: center;
 	z-index: 16;
-	top: 20px;
+	top: 80px;
 	color: white;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 .loaded #container {
 	opacity: 0;

@@ -58,6 +58,7 @@ ul {
 }
 .name {
 	color: var(--skin-color);
+	padding-right: 15px;
 }
 .section-title {
 	flex: 0 0 100%;
@@ -437,6 +438,7 @@ h3.my-profession {
 	text-align: center;
 	cursor: pointer;
 	border-radius: 10px;
+	color: black;
 	background-color: lightgray;
 }
 .close-button:hover {
@@ -784,12 +786,14 @@ h3.my-profession {
 		padding-left: 0;
 	}
 	.about .about-content .personal-info .info-item p span {
+		font-size: 13px;
 		display: block;
 		margin-left: 0;
 	}
 }
 @media (max-width: 991px) {
 	body {
+		overflow-x: hidden;
 		max-width: 800px;
 	}
 	.contact .contact-info-item,
@@ -869,8 +873,14 @@ h3.my-profession {
 		margin-top: -30px;
 	}
 	#container {
-		font-size: 0.8em !important;
-		margin: auto;
+		margin-top: 20px;
+		font-size: 0.7em !important;
+	}
+	#loader {
+		margin-top: -2% !important;
+	}
+	#loader-logo {
+		margin-top: 15% !important;
 	}
 }
 @media (max-width: 767px) {
