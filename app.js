@@ -65,7 +65,7 @@ window.addEventListener('load', () => {
 });
 /* preloader screen */
 window.addEventListener('load', () => {
-	document.getElementByIdd('preloader');
+	document.getElementById('preloader');
 	setTimeout(() => {
 		preloader.classList.add('loaded');
 	}, 3350);
