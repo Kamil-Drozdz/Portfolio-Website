@@ -184,8 +184,6 @@ ul {
 	display: none;
 	align-items: center;
 	justify-content: center;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	z-index: 2;
 	outline: none;
 }
@@ -706,10 +704,9 @@ h3.my-profession {
 	border-radius: 10px;
 	overflow: hidden;
 	cursor: pointer;
-}
-.portfolio .portfolio-item-inner .porfolio-img img {
 	width: 100%;
 	display: block;
+	max-height: 700px;
 }
 /* Contact*/
 .row-contact {
@@ -751,7 +748,8 @@ h3.my-profession {
 	font-weight: 700;
 	color: var(--text-black-700);
 	text-transform: capitalize;
-	margin: 15px 0 5px;
+	padding-top: 15px;
+	margin: 10px 0px;
 }
 .contact .contact-info-item p {
 	font-size: 16px;
@@ -940,11 +938,6 @@ h3.my-profession {
 	flex: 0 0 50%;
 	max-width: 50%;
 }
-.portfolio .portfolio-item {
-	flex: 0 0 33%;
-	max-width: 33%;
-}
-
 /* animation frames*/
 @keyframes load-React {
 	0% {
