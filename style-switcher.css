@@ -8,7 +8,7 @@
 	justify-content: flex-end;
 	align-items: flex-start;
 	align-content: flex-start;
-	height: 100px;
+	height: 55px;
 	padding: 15px;
 	width: 280px;
 	border: 1px solid var(--bg-black-50);
@@ -55,7 +55,7 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border-radius: 50%;
-	top: 45px;
+	top: 6px;
 	margin-right: -225px;
 }
 .style-switcher h4 {
@@ -74,7 +74,7 @@
 	border: 1px solid red;
 }
 .color-picker {
-	margin-right: 20px;
+	margin-left: 5px;
 	border: none;
 }
 .style-switcher .reset {
@@ -89,7 +89,7 @@
 	cursor: pointer;
 	transition: all 0.5s ease;
 	border-radius: 50%;
-	top: 45px;
+	top: 6px;
 	margin-left: 70px;
 }
 .style-switcher .reset:hover {
@@ -116,7 +116,7 @@
 	cursor: pointer;
 	transition: all 0.5s ease;
 	border-radius: 50%;
-	top: 45px;
+	top: 6px;
 	margin-left: 120px;
 }
 .player:hover {
@@ -144,7 +144,7 @@
 	transition: all 0.5s ease;
 	border-radius: 50%;
 	right: 5px;
-	margin-top: 25px;
+	margin-top: -13px;
 	font-weight: 700;
 }
 .nav__switch-lang div:hover {
